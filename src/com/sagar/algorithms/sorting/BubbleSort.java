@@ -1,9 +1,8 @@
 package com.sagar.algorithms.sorting;
 
-public class BubbleSort {
+public class BubbleSort extends SortBase {
 
 	public static int[] bubbleSortMethod(int[] input, boolean debug) {
-		int[] value = input;
 		printArray(input, debug);
 		int itrations = 0;
 		for (int j = 1; j < input.length; j++) {
@@ -22,18 +21,9 @@ public class BubbleSort {
 				printArray(input, debug);
 			}
 		}
-		System.out.println("Total Itration needed to perform bubble sort on given input is :: " + itrations);
+		if (debug)
+			System.out.println("Total Itration needed to perform bubble sort on given input is :: " + itrations);
 		return input;
-	}
-
-	public static void printArray(int[] input, boolean debug) {
-		if (debug) {
-			for (int i = 0; i < input.length; i++) {
-				System.out.print("| " + input[i] + " |");
-			}
-			System.out.println("");
-			System.out.println("");
-		}
 	}
 
 }

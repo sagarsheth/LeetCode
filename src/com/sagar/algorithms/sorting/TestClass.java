@@ -29,6 +29,32 @@ public class TestClass {
 		int[] result3 = input3;
 		Assert.assertArrayEquals(result3, BubbleSort.bubbleSortMethod(input3, false));
 
+		int[] input4 = { 7, 5, 10, 6, 7, 1, 2, 6, 7, 2, 1 };
+		int[] result4 = { 1, 1, 2, 2, 5, 6, 6, 7, 7, 7, 10 };
+		Assert.assertArrayEquals(result4, BubbleSort.bubbleSortMethod(input4, false));
+
+	}
+
+	@Test
+	public void testMergeSortedArray() {
+
+		int[] input1 = { 3, 5, 8, 9 };
+		int[] input2 = { 2, 4, 7, 10 };
+		int[] result = { 2, 3, 4, 5, 7, 8, 9, 10 };
+		Assert.assertArrayEquals(result, MergeSort.mergeSortedArrays(input1, input2, false));
+
+		int[] input11 = { 3, 5, 8, 9 };
+		int[] input12 = { 2, 4 };
+		int[] result1 = { 2, 3, 4, 5, 8, 9 };
+		Assert.assertArrayEquals(result1, MergeSort.mergeSortedArrays(input11, input12, false));
+		Assert.assertArrayEquals(result1, MergeSort.mergeSortedArrays(input12, input11, false));
+
+		int[] input21 = { 3, 5, 8, 9 };
+		int[] input22 = { 2, 4 };
+		int[] result2 = { 2, 3, 4, 5, 8, 9 };
+		Assert.assertArrayEquals(result2, MergeSort.mergeSortedArrays(input21, input22, false));
+		Assert.assertArrayEquals(result2, MergeSort.mergeSortedArrays(input22, input21, false));
+
 	}
 
 	@Test
@@ -49,5 +75,10 @@ public class TestClass {
 		int[] result3 = input3;
 		Assert.assertArrayEquals(result3, MergeSort.mergeSortMethod(input3, false));
 
+		int[] input4 = { 7, 5, 10, 6, 7, 1, 2, 6, 7, 2, 1 };
+		int[] result4 = { 1, 1, 2, 2, 5, 6, 6, 7, 7, 7, 10 };
+		Assert.assertArrayEquals(result4, MergeSort.mergeSortMethod(input4, false));
+
 	}
+
 }
